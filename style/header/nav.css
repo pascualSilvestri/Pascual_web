@@ -1,0 +1,32 @@
+
+
+.nav{
+    display: flex;
+    height: 3rem;
+    background-color: var(--fondo-gris);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_Logo{
+    width: 15%;
+    height: 50%;
+    background-color: var(--fondo-azul-btn);
+}
+
+.ul_nav{
+    display: flex;
+    width: 60%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.li_nav{
+    list-style: none;
+}
+
+.li_nav a{
+    text-decoration: none;
+    color:var(--color-letras);
+    font-size:1.2rem;
+}
