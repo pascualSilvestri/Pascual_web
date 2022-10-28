@@ -1,0 +1,63 @@
+.contacto{
+    width: 100%;
+    height: auto;
+    padding: 7rem 7rem;
+    display: flex;
+    margin: 5rem 0 ;
+    background-color: var(--fondo-azul);
+    justify-content: space-between;
+    align-items: center;
+    color:var(--color-letras);
+}
+
+
+.contacto_img{
+    width: 40%;
+    height: 30rem;
+    padding: 2rem;
+}
+
+.contacto_img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.contacto_form{
+    width: 60%;
+    height:30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.contacto_form__titulo{
+    font-size: 2.5rem;
+    margin: 0 0 1rem 0;
+}
+
+.contacto_form__parrafo{
+    font-size: 1rem;
+}
+
+.div_label_contacto{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.contacto_form__label{
+    border-radius: 10px 10px 0 0;
+}
+
+.contacto_form__input{
+    border: none;
+    width: 100%;
+    height: 2.5rem;
+}
+
+.contacto_mensaje{
+    width: 100%;
+}
