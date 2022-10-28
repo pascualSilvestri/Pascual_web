@@ -49,8 +49,11 @@ header{
 .img_header{
     width: 30%;
     height: 100%;
-    background: url(/recursos/img/20191110_203425.jpg);
-    background-size: cover;
-    background-position: center;
+    border-radius: 50%;
+}
+
+.img_header img{
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
 }
