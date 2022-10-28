@@ -1,7 +1,7 @@
 .contacto{
     width: 100%;
     height: auto;
-    padding: 7rem 7rem;
+    padding: 5rem 7rem;
     display: flex;
     margin: 5rem 0 ;
     background-color: var(--fondo-azul);
@@ -13,7 +13,7 @@
 
 .contacto_img{
     width: 40%;
-    height: 30rem;
+    height: auto;
     padding: 2rem;
 }
 
@@ -25,11 +25,15 @@
 
 .contacto_form{
     width: 60%;
-    height:30rem;
+    height:auto;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-evenly;
+}
+
+.contacto_container_titulo{
+    margin-bottom: 3rem;
 }
 
 .contacto_form__titulo{
@@ -39,6 +43,7 @@
 
 .contacto_form__parrafo{
     font-size: 1rem;
+    font-weight: 500;
 }
 
 .div_label_contacto{
@@ -46,10 +51,13 @@
     flex-direction: column;
     width: 100%;
     background-color: #ffffff;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 2rem;
 }
 
 .contacto_form__label{
     border-radius: 10px 10px 0 0;
+    padding: .5rem;
 }
 
 .contacto_form__input{
@@ -58,6 +66,25 @@
     height: 2.5rem;
 }
 
+.asunto{
+    margin-bottom: 2rem;
+    height: 2.5rem;
+}
+
 .contacto_mensaje{
     width: 100%;
+    border: none;
+    height: 10rem;
+}
+
+.contacto_btn{
+    margin: 3rem 0;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--fondo-azul-btn);
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 500
 }
