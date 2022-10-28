@@ -1,0 +1,46 @@
+.skill{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0 7rem;
+    height: 25rem;
+}
+
+.skill_titulo{
+    color: var(--color-letras);
+    font-size: 2rem;
+}
+
+.container_skill{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    height: auto;
+    justify-content: space-around;
+    margin-bottom: 4rem;
+}
+
+.div_skill{
+    width: 150px;
+    height: 150px;
+    background-color:#ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 10%;
+    padding: 1rem;
+}
+
+.img_logo__skill{
+    width: 30%;
+    height: 30%;
+    margin-bottom: .3rem;  
+    opacity: 0.5;
+    
+}
+.div_skill p{
+    font-weight: 600;
+    color:var(--color-letras)
+}

@@ -2,31 +2,39 @@
 
 .nav{
     display: flex;
-    height: 3rem;
-    background-color: var(--fondo-gris);
+    height: 7rem;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
+    padding: 0 7rem;
 }
 
 .nav_Logo{
-    width: 15%;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    width: 20%;
     height: 50%;
-    background-color: var(--fondo-azul-btn);
+    color: var(--color-letras);
 }
 
 .ul_nav{
     display: flex;
-    width: 60%;
     justify-content: space-evenly;
     align-items: center;
 }
 
 .li_nav{
     list-style: none;
+    margin:0 1rem 0 0
 }
 
 .li_nav a{
     text-decoration: none;
     color:var(--color-letras);
     font-size:1.2rem;
+}
+
+.li_nav .correo{
+    font-weight: 600;
 }

@@ -1,0 +1,56 @@
+header{
+    width: 100%;
+    height: 20rem;
+    display: flex;
+    padding: 0 7rem;
+    margin: 2rem 0 2rem 0;
+}
+
+.presentacion_titulo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 75%;
+    height: 100%;
+    padding: 0 2rem 0 0;
+}
+
+.titulo_header{
+    font-size: 2.4rem;
+    font-weight: 600;
+    color:var(--color-letras);
+    text-align:start;
+}
+
+.parrafo_header{
+    font-size: 1.1rem;
+}
+
+.sobre_mi__ul_header{
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+}
+
+.sobre_mi__li_header{
+    list-style: none;
+}
+
+.sobre_mi__li_header a{
+    text-decoration: none;
+    color: var(--color-letras);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin:0 .5rem 0 0;
+}
+
+
+.img_header{
+    width: 30%;
+    height: 100%;
+    background: url(/recursos/img/20191110_203425.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
