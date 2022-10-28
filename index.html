@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="style/main/formacion_academica.css">
     <link rel="stylesheet" href="style/main/experiencia.css">
     <link rel="stylesheet" href="style/main/contacto.css">
+    <link rel="stylesheet" href="style/footer/footer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,900;1,700&display=swap"
@@ -27,12 +28,11 @@
             <h2>Pascual Silvestri</h2>
         </span>
         <ul class="ul_nav">
-            <li class="li_nav"><a href="#" class="a_nav">Sobre mi</a></li>
-            <li class="li_nav"><a href="#" class="a_nav">Skill</a></li>
-            <li class="li_nav"><a href="#" class="a_nav">Hobbies</a></li>
-            <li class="li_nav"><a href="#" class="a_nav">Formacion</a></li>
-            <li class="li_nav"><a href="#" class="a_nav">Proyectos</a></li>
-            <li class="li_nav"><a href="#" class="a_nav correo">pascualsilvestri14@gmail.com</a>
+            <li class="li_nav"><a href="#sobre-mi" class="a_nav">Sobre mi</a></li>
+            <li class="li_nav"><a href="#skill-dominado" class="a_nav">Skill</a></li>
+            <li class="li_nav"><a href="#formacion" class="a_nav">Formacion</a></li>
+            <li class="li_nav"><a href="#experiencia-laboral" class="a_nav">Proyectos</a></li>
+            <li class="li_nav"><a href="#contacto-correo" class="a_nav correo">pascualsilvestri14@gmail.com</a>
             </li>
         </ul>
     </nav>
@@ -64,8 +64,8 @@
         </section>
     </header>
     <main>
-        <section class="sobre_mi">
-            <div class="sobre_mi__div">
+        <section id="sobre-mi" class="sobre_mi">
+            <div  class="sobre_mi__div">
                 <h2 class="sobre_mi__titulo">
                     Sobre mi
                 </h2>
@@ -78,7 +78,7 @@
                 <span class="sobre_mi__firma">Firma mia</span>
             </div>
         </section>
-        <section class="skill">
+        <section id="skill-dominado" class="skill">
             <h2 class="skill_titulo">
                 SKILL
             </h2>
@@ -109,7 +109,7 @@
                 </div>
             </div>
         </section>
-        <section class="formacion_academica">
+        <section id="formacion" class="formacion_academica">
             <h2 class="formacion_titulo">Formación Académica</h2>
             <div class="formacion_container_card">
                 <div>
@@ -147,7 +147,7 @@
                 </div>
             </div>
         </section>
-        <section class="experiencia">
+        <section id="experiencia-laboral" class="experiencia">
             <h2 class="experiencia_titulo">
                 Experiencia profesional
             </h2>
@@ -262,7 +262,7 @@
 
             </div>
         </section>
-        <section class="contacto">
+        <section id="contacto-correo" class="contacto">
             <div class="contacto_img">
                 <img src="recursos/img/img_contacto.jpg" alt="">
             </div>
@@ -282,15 +282,17 @@
                 <div class="div_label_contacto">
                     <label for="nombre" class="contacto_form__label">
                         Nombre
+                        <input type="text" class="contacto_form__input">
                     </label>
-                    <input type="text" class="contacto_form__input">
+                    
                 </div>
 
                 <div class="div_label_contacto">
                     <label for="email" class="contacto_form__label">
                         Email
+                        <input type="email" class="contacto_form__input">
                     </label>
-                    <input type="email" class="contacto_form__input">
+                    
                 </div>
                 <input type="text" class="contacto_form__input asunto" placeholder="Asunto">
                 <textarea name="mensaje"class="contacto_mensaje" cols="30" rows="10" placeholder="Mensaje"></textarea>
@@ -298,7 +300,12 @@
             </div>
         </section>
     </main>
-    <footer></footer>
+    <footer>
+        <h3 class="footer_titulo">
+            Desarrollado por : Pascual Silvestri <br>
+            2022
+        </h3>
+    </footer>
 </body>
 
 </html>

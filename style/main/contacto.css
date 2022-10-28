@@ -3,7 +3,7 @@
     height: auto;
     padding: 5rem 7rem;
     display: flex;
-    margin: 5rem 0 ;
+    margin: 5rem 0 0 0 ;
     background-color: var(--fondo-azul);
     justify-content: space-between;
     align-items: center;
@@ -58,23 +58,43 @@
 .contacto_form__label{
     border-radius: 10px 10px 0 0;
     padding: .5rem;
+    opacity: .6;
 }
+
 
 .contacto_form__input{
     border: none;
     width: 100%;
     height: 2.5rem;
+    outline: none;
+}
+
+.contacto_form__input:focus{
+    border-bottom: 4px solid var(--fondo-azul-btn);
 }
 
 .asunto{
     margin-bottom: 2rem;
-    height: 2.5rem;
+    height: 3rem;
+    border-radius: 10px 10px 0 0;
+    padding: 0 0 0 10px;
 }
+
+.asunto::placeholder{
+   opacity: .8;
+}
+
 
 .contacto_mensaje{
     width: 100%;
     border: none;
     height: 10rem;
+    outline: none;
+    padding: 10px;
+}
+
+.contacto_mensaje::placeholder{
+    opacity: .8;
 }
 
 .contacto_btn{
