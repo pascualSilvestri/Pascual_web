@@ -1,0 +1,56 @@
+@media only screen and (max-width: 600px){
+    header{
+        padding: 0 1rem;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin: 1rem;
+    }
+
+    .presentacion_titulo{
+        display: flex;
+        flex-direction: column;
+        height: 70%;
+        width: 100%;
+        padding: 0 2rem 0 0;
+    }
+
+    .titulo_header{
+        font-size: 1.4rem;
+    }
+
+    .parrafo_header{
+        font-size: .9rem;
+        margin: 1rem 0;
+    }
+
+    .sobre_mi__ul_header{
+        width: 100%;
+    }
+    .sobre_mi__li_header a{
+        font-size: .8rem;
+    }
+
+    
+    .sobre_mi__li_header a,i{
+        font-size: .8rem;
+    }
+
+    .img_header{
+        width: 50%;
+        height: 100%;
+        border-radius: 50%;
+    }
+    
+    .img_header img{
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    }
+}
+
+
+@media only screen and (max-width: 1025px){
+    .parrafo_header{
+        margin: 1rem 0;
+    }
+}

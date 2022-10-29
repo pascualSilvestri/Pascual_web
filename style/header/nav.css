@@ -11,10 +11,10 @@
 
 .nav_Logo{
     display: flex;
-    justify-content:flex-start;
+    justify-content:center;
     align-items: center;
     width: 20%;
-    height: 50%;
+    height: 100%;
     color: var(--color-letras);
 }
 
@@ -39,6 +39,6 @@
     font-weight: 900;
 }
 
-.li_nav .correo{
+.correo a{
     font-weight: 600;
 }

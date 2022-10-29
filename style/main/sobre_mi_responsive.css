@@ -1,0 +1,23 @@
+@media only screen and (max-width: 600px){
+    .sobre_mi{
+        height: auto;
+        padding: 3rem 1rem;
+        justify-content: center;
+    }
+
+    .sobre_mi__div{
+        width: 100%;
+    }
+
+    .sobre_mi__titulo{
+        font-size: 1.5rem;
+        margin:1.5rem 0;
+    }
+}
+
+
+@media only screen and (max-width: 1025px){
+    .sobre_mi__div{
+        width: 100%;
+    }
+}

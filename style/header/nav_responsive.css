@@ -1,0 +1,72 @@
+@media only screen and (max-width: 600px){
+
+    .nav{
+        padding: 0 1rem;
+        justify-content: center;
+        height: 4rem;
+    }
+
+    .nav_Logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: .8rem;
+        width: 50%;
+    }
+    .nav_Logo h2{
+        font-size: .9rem;
+    }
+
+    .ul_nav{
+        justify-content: flex-start;
+    }
+
+
+    .li_nav {
+        display: none;
+        margin: 0;
+    }
+
+    .correo{
+        display: inline;
+        
+    }
+    .correo a{
+        font-size: .8rem;
+        
+    }
+    
+}
+
+
+
+@media only screen and (max-width: 1025px){
+    .nav{
+        padding: 0 1rem;
+        justify-content: center;
+        height: 4rem;
+    }
+
+    .nav_Logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: .8rem;
+        width: 50%;
+    }
+
+    .ul_nav{
+        justify-content: flex-start;
+    }
+
+
+    .li_nav {
+        display: none;
+        margin: 0;
+    }
+
+    .correo{
+        display: inline;
+        font-size: .7rem;
+    }
+}

@@ -1,6 +1,6 @@
 header{
     width: 100%;
-    height: 20rem;
+    height: auto;
     display: flex;
     padding: 0 7rem;
     margin: 2rem 0 2rem 0;
@@ -43,6 +43,10 @@ header{
     font-size: 1.2rem;
     font-weight: 600;
     margin:0 .5rem 0 0;
+}
+
+.sobre_mi__li_header a:hover{
+    font-weight: 500;
 }
 
 

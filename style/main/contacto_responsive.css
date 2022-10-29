@@ -1,0 +1,38 @@
+@media only screen and (max-width: 600px){
+    .contacto{
+        width: 100%;
+        height: auto;
+        padding: 3rem 1rem;
+        margin: 1rem 0 0 0 ;
+        justify-content: center;
+
+    }
+    .contacto_img{
+        display: none;
+    }
+
+    .contacto_form{
+        width: 100%;
+        height:auto;
+    }
+}
+
+
+@media only screen and (max-width: 1025px){
+    .contacto{
+        width: 100%;
+        height: auto;
+        padding: 3rem 1rem;
+        margin: 1rem 0 0 0 ;
+        justify-content: center;
+
+    }
+    .contacto_img{
+        display: none;
+    }
+
+    .contacto_form{
+        width: 100%;
+        height:auto;
+    }
+}
