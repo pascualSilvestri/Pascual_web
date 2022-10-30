@@ -5,6 +5,10 @@
         padding: 0 1rem;
     }
 
+    .formacion_titulo{
+        text-align: center;
+    }
+
     .formacion_container_card{
         display: flex;
         flex-direction: column;

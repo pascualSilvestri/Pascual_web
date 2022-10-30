@@ -3,24 +3,26 @@
         padding: 0 1rem;
         flex-direction: column-reverse;
         align-items: center;
-        margin: 1rem;
     }
 
     .presentacion_titulo{
         display: flex;
         flex-direction: column;
+        align-items: center;
         height: 70%;
         width: 100%;
-        padding: 0 2rem 0 0;
+        padding: 0;
     }
 
     .titulo_header{
         font-size: 1.4rem;
+        text-align: justify;
     }
 
     .parrafo_header{
         font-size: .9rem;
         margin: 1rem 0;
+        text-align: justify;
     }
 
     .sobre_mi__ul_header{
@@ -36,9 +38,10 @@
     }
 
     .img_header{
-        width: 50%;
+        width: 60%;
         height: 100%;
         border-radius: 50%;
+        margin-bottom: 2rem;
     }
     
     .img_header img{

@@ -36,15 +36,21 @@
 }
 
 .card_detalle{
-    width: 30%;
+    width: 25%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+.experiencia_card_titulo{
+    margin: 1rem 0;
+    text-align: center;
+}
+
 .experiencia_card_parrafo{
     margin: 1rem 0;
+    text-align: center;
 }
 
 .experiencia_card_btn{
@@ -88,9 +94,9 @@
 .left{
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 .right{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
