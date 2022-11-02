@@ -1,7 +1,7 @@
 .sobre_mi{
     width: 100%;
     height: auto;
-    padding: 3rem 7rem;
+    padding: 2rem 7rem;
     background-color: var(--fondo-azul);
     display: flex;
     justify-content: flex-start;
@@ -24,6 +24,7 @@
 
 .sobre_mi__parrafo{
     color: var(--color-letras);
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-align: justify;
+    letter-spacing: .2rem;
 }

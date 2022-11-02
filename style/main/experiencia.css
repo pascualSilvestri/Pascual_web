@@ -46,11 +46,13 @@
 .experiencia_card_titulo{
     margin: 1rem 0;
     text-align: center;
+    line-height: 2rem;
 }
 
 .experiencia_card_parrafo{
     margin: 1rem 0;
     text-align: center;
+    letter-spacing: .1rem;
 }
 
 .experiencia_card_btn{

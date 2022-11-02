@@ -21,12 +21,13 @@ header{
     font-weight: 600;
     color:var(--color-letras);
     text-align:start;
-    margin-bottom: 2rem;
+    margin-bottom: 2    rem;
 }
 
 .parrafo_header{
     font-size: 1.1rem;
     margin-bottom: 2rem;
+    letter-spacing: 0.1rem;
 }
 
 .sobre_mi__ul_header{
