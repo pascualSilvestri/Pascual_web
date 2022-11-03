@@ -1,0 +1,13 @@
+
+
+.sin-validar{
+    border: 2px solid #f24;
+}
+
+.valida{
+    border: 2px solid var(--color-letras-azul);
+}
+
+.sin-validar::placeholder{
+    color:var(--color-letras);
+}

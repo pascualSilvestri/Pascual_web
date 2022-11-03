@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="style/main/formacion_resposiva.css">
     <link rel="stylesheet" href="style/main/experiencia_resposiva.css">
     <link rel="stylesheet" href="style/main/contacto_responsive.css">
+    <link rel="stylesheet" href="style/main/validaciones_contacto.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,900;1,700&display=swap"
@@ -283,23 +284,27 @@
                     </p>
                 </div>
 
-                <div class="div_label_contacto">
-                    <label for="nombre" class="contacto_form__label">
-                        Nombre
-                        <input type="text" id="form-nombre" class="contacto_form__input">
+                <div class="div_label_contacto form_cont_nombre">
+                    <label for="nombre" class="contacto_form__label form_label_nombre">Nombre
                     </label>
-                    
+                    <input type="text" id="form-nombre" class="contacto_form__input">
                 </div>
 
-                <div class="div_label_contacto">
-                    <label for="email" id="form-email" class="contacto_form__label">
+                <div class="div_label_contacto form_cont_email">
+                    <label for="email"  class="contacto_form__label form_label_email ">
                         Email
-                        <input type="email" class="contacto_form__input">
                     </label>
-                    
+                    <input type="email" id="form-email" class="contacto_form__input">
                 </div>
-                <input type="text" id="form-asunto" class="contacto_form__input asunto" placeholder="Asunto">
+                <div class="div_label_contacto form_cont_asunto">
+                    <label for="asunto" id="form-email" class="contacto_form__label form_label_asunto">
+                        Asunto
+                    </label>
+                    <input type="text" id="form-asunto" class="contacto_form__input asunto">
+                </div>
+                
                 <textarea name="mensaje" id="form-textarea" class="contacto_mensaje" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                
                 <button type="submit" class="contacto_btn">Enviar Mensaje</button>
             </div>
         </section>
