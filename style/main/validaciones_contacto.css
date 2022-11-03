@@ -1,11 +1,11 @@
 
 
 .sin-validar{
-    border: 2px solid #f24;
+    border: 2px solid #f655;
 }
 
 .valida{
-    border: 2px solid var(--color-letras-azul);
+    border: 2px solid #65f9;
 }
 
 .sin-validar::placeholder{
