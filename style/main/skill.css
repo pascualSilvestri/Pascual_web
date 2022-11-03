@@ -21,6 +21,7 @@
     height: auto;
     justify-content: space-around;
     margin-bottom: 4rem;
+    
 }
 
 .div_skill{
@@ -33,6 +34,7 @@
     border-radius: 10%;
     padding: 1rem;
     margin-top: 2rem;
+    box-shadow: 0 0 40px 1px #999;
 }
 
 .img_logo__skill{

@@ -8,6 +8,7 @@
     background-color: var(--fondo-azul);
     padding: 0 7rem;
     color: var(--color-letras);
+    box-shadow: 0 0 40px 1px #999;
 }
 
 .formacion_titulo{
@@ -29,6 +30,7 @@
     align-items: center;
     border-radius: 5%;
     margin-bottom: 1rem;
+    box-shadow: 0 0 20px 1px #aaa;
 }
 
 .formacion_card img{

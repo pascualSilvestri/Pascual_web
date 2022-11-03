@@ -6,6 +6,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    box-shadow: 0 0 40px 1px #999;
 }
 .sobre_mi__div{
     display: flex;

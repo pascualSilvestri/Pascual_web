@@ -4,7 +4,9 @@ let nombre = document.querySelector("#form-nombre");
 let email = document.querySelector("#form-email");
 let textarea = document.querySelector("#form-textarea");
 let asunto = document.querySelector("#form-asunto");
+
 let btn = document.querySelector(".contacto_btn");
+
 let cont_nombre = document.querySelector(".form_cont_nombre");
 let cont_email = document.querySelector(".form_cont_email");
 let cont_asunto = document.querySelector(".form_cont_asunto");
@@ -32,6 +34,12 @@ function error(cont){
 function valido (cont){
     cont.classList.remove("sin-validar")
     cont.classList.add("valida");
+}
+
+
+function sinEstado(cont){
+    cont.classList.remove("sin-validar")
+    cont.classList.remove("valida");
 }
 
 function validar(input,cont){
@@ -93,3 +101,18 @@ function validar(input,cont){
         
     });
 }
+
+btn.addEventListener("click",e=>{
+    if(nombre.value =="" || email.value == ""|| asunto.value =="" || textarea.value ==""){
+        alert("Todos los campos tienen que estar completo.");
+    } else{
+        alert("Envio con exito");
+        nombre.value="";
+        email.value="";
+        asunto.value="";
+        textarea.value="";
+        sinEstado(cont_nombre);
+        sinEstado(cont_email);
+        sinEstado(cont_asunto);
+    }
+});
