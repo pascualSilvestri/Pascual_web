@@ -1,0 +1,20 @@
+.volverArriba{
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: var(--fondo-azul-btn);
+    border: none;
+    border-radius: 50px;
+    opacity: .8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color:var( --color-letras);
+} 
+
+.volverArriba i{
+    font-size: 1.5rem;
+}
