@@ -17,6 +17,11 @@ let label_nombre = document.querySelector(".form_label_nombre");
 let label_email = document.querySelector(".form_label_email");
 let label_asunto = document.querySelector(".form_label_asunto");
 
+let errorN = false
+let errorE = false
+let errorA = false
+let errorM = false
+
 
 const redex = {
     'nombre': /^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/,
@@ -46,68 +51,62 @@ function sinEstado(cont){
 }
 
 function validar(input,cont){
-    let ban = true
-    input.addEventListener("blur",e =>{
-        if(e.path[0].id == "form-nombre"){
+    input.addEventListener("blur", e =>{
+        if(e.target.id == "form-nombre"){
 
             if(input.value != ""&& redex["nombre"].test(input.value)){
-
                 valido(cont)
-                eliminarError()
-
+                eliminarError(".nombre")
+                errorN = false
             }else 
-                if(ban){
+                if(!errorN){
                 error(cont)
-                divError(errorMensaje['nombre'],cont_nombre);
-                ban = false;
+                divError(errorMensaje['nombre'],cont_nombre,"nombre");
+                errorN = true
             }
         }
-        if(e.path[0].id == "form-email"){
-
+        if(e.target.id== "form-email"){
             if(input.value != ""&& redex["email"].test(input.value)){
-
+                console.log(cont)
                 valido(cont)
-                eliminarError()
-
-            }else if(ban){
+                eliminarError(".email")
+                errorE = false
+            }else 
+            if(!errorE){
                 error(cont)
-                divError(errorMensaje['email'],cont_email);
-                ban = false;
+                divError(errorMensaje['email'],cont_email,"email");
+                errorE = true
             }
         }
 
-        if(e.path[0].id == "form-asunto"){
+        if(e.target.id == "form-asunto"){
 
             if(input.value != ""&& redex["asunto"].test(input.value)){
-
                 valido(cont)
-                eliminarError()
-
-            }else if(ban){
+                eliminarError(".asunto")
+                errorA= false   
+            }else 
+                if(!errorA){
                 error(cont)
-                divError(errorMensaje['asunto'],cont_asunto);
-                ban = false;
-
+                divError(errorMensaje['asunto'],cont_asunto,"asunto");
+                errorA=true
             }
         }
 
-        if(e.path[0].id == "form-mensaje"){
-
+        if(e.target.id == "form-mensaje"){
             if(input.value != ""&& redex["asunto"].test(input.value)){
-
                 valido(cont)
-
             }else{
-
                 error(cont)
-            
             }
         }
     });
-    input.addEventListener("click",e=>{
-        eliminarError()
-        ban = true
-    });
+
+}
+
+function eliminarError(clase){
+    let div = document.querySelector(clase);
+    div.remove()
 }
 
 btn.addEventListener("click",e=>{
@@ -137,24 +136,26 @@ document.addEventListener("scroll",e =>{
     
 });
 
-function divError(error,cont){
+function divError(error,cont,clase){
     let div = document.createElement("div");
     let cont_div = document.createTextNode(error)
     div.appendChild(cont_div);
-    div.classList.add("mensaje-error")
+    div.classList.add("mensaje-error",clase)
     cont.append(div);
 }
 
-function eliminarError(){
-    let div = document.querySelector(".mensaje-error");
-    let padre = div.parentElement
-    
-    padre.removeChild(div);
+
+function prueba(){
+    document.addEventListener("click",e=>{
+
+    })
 }
 
-//Main
 
-validar(nombre,cont_nombre);
-validar(email,cont_email);
-validar(asunto,cont_asunto);
-validar(textarea,cont_mensaje)
+    validar(nombre,cont_nombre);
+    validar(email,cont_email);
+    validar(asunto,cont_asunto);
+    validar(textarea,cont_mensaje)
+
+
+//Main
