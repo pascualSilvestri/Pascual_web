@@ -22,13 +22,13 @@ const redex = {
     'nombre': /^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/,
     'email':/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
     'asunto': /[a-zA-Z0-9][^_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/
-
 };
 
-validar(nombre,cont_nombre);
-validar(email,cont_email);
-validar(asunto,cont_asunto);
-validar(textarea,cont_mensaje)
+const errorMensaje= {
+    'nombre': `No puede estar vacio ni contener numeros, min-3 letras.`,
+    'email': `El formato correcto es ejemplo@correo.com`,
+    'asunto': `No puede estar vacio debe contener min 2 letra`
+}
 
 function error(cont){
     cont.classList.add("sin-validar");
@@ -40,80 +40,73 @@ function valido (cont){
     cont.classList.add("valida");
 }
 
-
 function sinEstado(cont){
     cont.classList.remove("sin-validar")
     cont.classList.remove("valida");
 }
 
 function validar(input,cont){
+    let ban = true
     input.addEventListener("blur",e =>{
         if(e.path[0].id == "form-nombre"){
-
-            if(input.value == ""){
-
-                error(cont)
-                input.placeholder =`El campo no puede estar vacio`
-
-            }
 
             if(input.value != ""&& redex["nombre"].test(input.value)){
 
                 valido(cont)
+                eliminarError()
 
-            }else{
+            }else 
+                if(ban){
                 error(cont)
-                input.placeholder =`No puede estar vacio ni contener numeros, min-2 letras.`
+                divError(errorMensaje['nombre'],cont_nombre);
+                ban = false;
             }
         }
         if(e.path[0].id == "form-email"){
 
-            if(input.value == ""){
-
-                error(cont)
-                input.placeholder =`El campo no puede estar vacio`
-
-            }
-
             if(input.value != ""&& redex["email"].test(input.value)){
 
                 valido(cont)
+                eliminarError()
 
-            }else{
+            }else if(ban){
                 error(cont)
-                input.placeholder =`El formato correcto es ejemplo@correo.com`
+                divError(errorMensaje['email'],cont_email);
+                ban = false;
             }
         }
+
         if(e.path[0].id == "form-asunto"){
 
-            if(input.value == ""){
-
-                error(cont)
-                input.placeholder =`El campo no puede estar vacio`
-
-            }
-
             if(input.value != ""&& redex["asunto"].test(input.value)){
 
                 valido(cont)
+                eliminarError()
 
-            }else{
+            }else if(ban){
                 error(cont)
-                input.placeholder =`No puede estar vacio debe contener min 2 letra`
+                divError(errorMensaje['asunto'],cont_asunto);
+                ban = false;
+
             }
         }
+
         if(e.path[0].id == "form-mensaje"){
 
-
             if(input.value != ""&& redex["asunto"].test(input.value)){
 
                 valido(cont)
 
             }else{
+
                 error(cont)
+            
             }
         }
-        
+    });
+    input.addEventListener("click",e=>{
+        eliminarError()
+        ban = true
     });
 }
 
@@ -132,16 +125,36 @@ btn.addEventListener("click",e=>{
     }
 });
 
-
 document.addEventListener("scroll",e =>{
 
     let scrolly = e.path[1].window.scrollY
-    if(scrolly > 200){
+    if(scrolly >= 200){
         btnArriva.style.display ="flex"
     }
     if(scrolly < 200){
         btnArriva.style.display ="none"
     }
     
-    
 });
+
+function divError(error,cont){
+    let div = document.createElement("div");
+    let cont_div = document.createTextNode(error)
+    div.appendChild(cont_div);
+    div.classList.add("mensaje-error")
+    cont.append(div);
+}
+
+function eliminarError(){
+    let div = document.querySelector(".mensaje-error");
+    let padre = div.parentElement
+    
+    padre.removeChild(div);
+}
+
+//Main
+
+validar(nombre,cont_nombre);
+validar(email,cont_email);
+validar(asunto,cont_asunto);
+validar(textarea,cont_mensaje)

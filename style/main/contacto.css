@@ -14,6 +14,7 @@
 
 .contacto_img{
     width: 50%;
+    min-height:100%;
     height: auto;
     padding: 0 2rem;
 }
@@ -106,4 +107,11 @@
     font-size: 1.2rem;
     font-weight: 500;
     font-family: var(--font-rawelay);
+}
+
+.mensaje-error{
+    border-radius: 10px 10px 0 0;
+    padding: .5rem;
+    opacity: .6;
+    color:#f54;
 }
