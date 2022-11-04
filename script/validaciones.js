@@ -22,6 +22,7 @@ let errorN = false
 let errorE = false
 let errorA = false
 let errorM = false
+let errorB = false
 
 
 const redex = {
@@ -124,8 +125,11 @@ btn.addEventListener("click",e=>{
         sinEstado(cont_email);
         sinEstado(cont_asunto);
         eliminarError(".error-btn");
-    } else{
+        errorB= false
+    } else
+        if(!errorB){
         divError(errorMensaje['btnError'],cont_form,"error-btn");
+        errorB= true
     }
 });
 

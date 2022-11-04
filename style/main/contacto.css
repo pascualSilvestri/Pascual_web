@@ -58,6 +58,7 @@
     background-color: #ffffff;
     border-radius: 10px 10px 0 0;
     margin-bottom: 1rem;
+    box-shadow: 0 0 10px 2px #ddd;
 }
 
 .contacto_form__label{
