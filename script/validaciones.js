@@ -12,6 +12,7 @@ let cont_nombre = document.querySelector(".form_cont_nombre");
 let cont_email = document.querySelector(".form_cont_email");
 let cont_asunto = document.querySelector(".form_cont_asunto");
 let cont_mensaje = document.querySelector(".form_cont_mensaje");
+let cont_form = document.querySelector(".contacto_form");
 
 let label_nombre = document.querySelector(".form_label_nombre");
 let label_email = document.querySelector(".form_label_email");
@@ -32,7 +33,8 @@ const redex = {
 const errorMensaje= {
     'nombre': `No puede estar vacio ni contener numeros, min-3 letras.`,
     'email': `El formato correcto es ejemplo@correo.com`,
-    'asunto': `No puede estar vacio debe contener min 2 letra`
+    'asunto': `No puede estar vacio debe contener min 2 letra`,
+    'btnError':"Por favor complete los campo correctamente."
 }
 
 function error(cont){
@@ -96,8 +98,10 @@ function validar(input,cont){
         if(e.target.id == "form-mensaje"){
             if(input.value != ""&& redex["asunto"].test(input.value)){
                 valido(cont)
+                errorM = false
             }else{
                 error(cont)
+                errorM = true
             }
         }
     });
@@ -110,9 +114,7 @@ function eliminarError(clase){
 }
 
 btn.addEventListener("click",e=>{
-    if(nombre.value =="" || email.value == ""|| asunto.value =="" || textarea.value ==""){
-        alert("Todos los campos tienen que estar completo.");
-    } else{
+    if(!errorA && !errorE && !errorM && !errorN&& nombre.value !=""&&email.value != "" && asunto.value != ""){
         alert("Envio con exito");
         nombre.value="";
         email.value="";
@@ -121,6 +123,9 @@ btn.addEventListener("click",e=>{
         sinEstado(cont_nombre);
         sinEstado(cont_email);
         sinEstado(cont_asunto);
+        eliminarError(".error-btn");
+    } else{
+        divError(errorMensaje['btnError'],cont_form,"error-btn");
     }
 });
 
