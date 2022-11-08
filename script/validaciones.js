@@ -1,5 +1,4 @@
 
-
 let nombre = document.querySelector("#form-nombre");
 let email = document.querySelector("#form-email");
 let textarea = document.querySelector("#form-mensaje");
@@ -27,80 +26,82 @@ let errorB = false
 
 const redex = {
     'nombre': /^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/,
-    'email':/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+    'email': /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
     'asunto': /[a-zA-Z0-9][^_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/
 };
 
-const errorMensaje= {
+const errorMensaje = {
     'nombre': `No puede estar vacio ni contener numeros, min-3 letras.`,
     'email': `El formato correcto es ejemplo@correo.com`,
     'asunto': `No puede estar vacio debe contener min 2 letra`,
-    'btnError':"Por favor complete los campo correctamente."
+    'btnError': "Por favor complete los campo correctamente."
 }
 
-function error(cont){
+function error(cont) {
     cont.classList.add("sin-validar");
     cont.classList.remove("valida");
 }
 
-function valido (cont){
+function valido(cont) {
     cont.classList.remove("sin-validar")
     cont.classList.add("valida");
 }
 
-function sinEstado(cont){
+function sinEstado(cont) {
     cont.classList.remove("sin-validar")
     cont.classList.remove("valida");
 }
 
-function validar(input,cont){
-    input.addEventListener("blur", e =>{
-        if(e.target.id == "form-nombre"){
+function validar(input, cont) {
+    input.addEventListener("blur", e => {
+        if (e.target.id == "form-nombre") {
 
-            if(input.value != ""&& redex["nombre"].test(input.value)){
+            if (input.value != "" && redex["nombre"].test(input.value)) {
                 valido(cont)
                 eliminarError(".nombre")
                 errorN = false
-            }else 
-                if(!errorN){
-                error(cont)
-                divError(errorMensaje['nombre'],cont_nombre,"nombre");
-                errorN = true
-            }
+            } else
+                if (!errorN) {
+                    error(cont)
+                    divError(errorMensaje['nombre'], cont_nombre, "nombre");
+                    errorN = true
+                }
         }
-        if(e.target.id== "form-email"){
-            if(input.value != ""&& redex["email"].test(input.value)){
+
+        if (e.target.id == "form-email") {
+
+            if (input.value != "" && redex["email"].test(input.value)) {
                 console.log(cont)
                 valido(cont)
                 eliminarError(".email")
                 errorE = false
-            }else 
-            if(!errorE){
-                error(cont)
-                divError(errorMensaje['email'],cont_email,"email");
-                errorE = true
-            }
+            } else
+                if (!errorE) {
+                    error(cont)
+                    divError(errorMensaje['email'], cont_email, "email");
+                    errorE = true
+                }
         }
 
-        if(e.target.id == "form-asunto"){
+        if (e.target.id == "form-asunto") {
 
-            if(input.value != ""&& redex["asunto"].test(input.value)){
+            if (input.value != "" && redex["asunto"].test(input.value)) {
                 valido(cont)
                 eliminarError(".asunto")
-                errorA= false   
-            }else 
-                if(!errorA){
-                error(cont)
-                divError(errorMensaje['asunto'],cont_asunto,"asunto");
-                errorA=true
-            }
+                errorA = false
+            } else
+                if (!errorA) {
+                    error(cont)
+                    divError(errorMensaje['asunto'], cont_asunto, "asunto");
+                    errorA = true
+                }
         }
 
-        if(e.target.id == "form-mensaje"){
-            if(input.value != ""&& redex["asunto"].test(input.value)){
+        if (e.target.id == "form-mensaje") {
+            if (input.value != "" && redex["asunto"].test(input.value)) {
                 valido(cont)
                 errorM = false
-            }else{
+            } else {
                 error(cont)
                 errorM = true
             }
@@ -109,62 +110,63 @@ function validar(input,cont){
 
 }
 
-function eliminarError(clase){
+function eliminarError(clase) {
     let div = document.querySelector(clase);
     div.remove()
 }
 
-btn.addEventListener("click",e=>{
-    if(!errorA && !errorE && !errorM && !errorN&& nombre.value !=""&&email.value != "" && asunto.value != ""){
+btn.addEventListener("click", e => {
+    if (!errorA && !errorE && !errorM && !errorN && nombre.value != "" && email.value != "" && asunto.value != "") {
         alert("Envio con exito");
-        nombre.value="";
-        email.value="";
-        asunto.value="";
-        textarea.value="";
+        nombre.value = "";
+        email.value = "";
+        asunto.value = "";
+        textarea.value = "";
         sinEstado(cont_nombre);
         sinEstado(cont_email);
         sinEstado(cont_asunto);
+        sinEstado(cont_mensaje);
         eliminarError(".error-btn");
-        errorB= false
+        errorB = false
     } else
-        if(!errorB){
-        divError(errorMensaje['btnError'],cont_form,"error-btn");
-        errorB= true
-    }
+        if (!errorB) {
+            divError(errorMensaje['btnError'], cont_form, "error-btn");
+            errorB = true
+        }
 });
 
-document.addEventListener("scroll",e =>{
+document.addEventListener("scroll", e => {
 
     let scrolly = e.path[1].window.scrollY
-    if(scrolly >= 200){
-        btnArriva.style.display ="flex"
+    if (scrolly >= 200) {
+        btnArriva.style.display = "flex"
     }
-    if(scrolly < 200){
-        btnArriva.style.display ="none"
+    if (scrolly < 200) {
+        btnArriva.style.display = "none"
     }
-    
+
 });
 
-function divError(error,cont,clase){
+function divError(error, cont, clase) {
     let div = document.createElement("div");
     let cont_div = document.createTextNode(error)
     div.appendChild(cont_div);
-    div.classList.add("mensaje-error",clase)
+    div.classList.add("mensaje-error", clase)
     cont.append(div);
 }
 
 
-function prueba(){
-    document.addEventListener("click",e=>{
+function prueba() {
+    document.addEventListener("click", e => {
 
     })
 }
 
 
-    validar(nombre,cont_nombre);
-    validar(email,cont_email);
-    validar(asunto,cont_asunto);
-    validar(textarea,cont_mensaje)
+validar(nombre, cont_nombre);
+validar(email, cont_email);
+validar(asunto, cont_asunto);
+validar(textarea, cont_mensaje)
 
 
 //Main
