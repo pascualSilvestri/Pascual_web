@@ -2,7 +2,7 @@
     width: 100%;
     min-height: 90vh;
     padding: 1rem 10rem;
-    display: none; /* por ahora cuando funcione el form es display flex*/
+    display: flex; /* por ahora cuando funcione el form es display flex*/
     margin: 5rem 0 0 0 ;
     background-color: var(--fondo-azul);
     justify-content: space-between;
